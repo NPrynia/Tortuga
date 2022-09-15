@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PiRDziAbrU9xTQWwfb/5mUuZ+JWWCdzP0N+ta5Nqf5ZaOA/dbOwAanRCN3h4b3BpawDWEOgap4LT5nTxnBtY7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nprya\\source\\repos\\TortugaPrianiKaraul\\TortugaPrianiKaraul\\TortugaPrianiKaraul.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nprya\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\nprya\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
