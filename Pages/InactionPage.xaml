@@ -1,0 +1,85 @@
+﻿<Page x:Class="TortugaPrianiKaraul.Pages.InactionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TortugaPrianiKaraul.Pages"
+      mc:Ignorable="d" 
+      ShowsNavigationUI="False"
+      d:DesignHeight="950" d:DesignWidth="1380"
+      Title="InactionPage">
+
+    <Grid
+        x:Name="MainGrid"
+        MouseLeftButtonDown="MainGrid_MouseLeftButtonDown"
+        >
+         <Image Source="/Res/background.png"  Stretch="Fill"/>
+            
+       
+        
+
+        <Grid 
+            Margin="0 0 0 100"
+            HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image x:Name="wheelImg" Source="/Res/wheel.png" Width="400"
+                   RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform x:Name="imgRotation"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Grid.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation RepeatBehavior="Forever" AutoReverse="True"
+                         Storyboard.TargetName="imgRotation"
+                         Storyboard.TargetProperty="(RotateTransform.Angle)"
+                         From="0.0" To="50" Duration="0:0:3" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+
+            </Image>
+            <Image Source="/Res/label.png" Width="350" VerticalAlignment="Bottom"/>
+
+
+        </Grid>
+        
+        <Grid Width="1650" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+            <Image 
+            x:Name="OceanImg"
+            Source="/Res/ocean.png" 
+            Height="550" 
+            VerticalAlignment="Bottom" 
+            Stretch="Fill"   
+
+            >
+                <Image.Triggers>
+
+                    <EventTrigger RoutedEvent="Grid.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard >
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="Margin" BeginTime="00:00:00" RepeatBehavior="Forever" AutoReverse="True">
+                                    <SplineThicknessKeyFrame KeyTime="00:00:00" Value="50, 0,0,0"  />
+                                    <SplineThicknessKeyFrame KeyTime="00:00:03" Value="0, 0,50,0" />
+                                </ThicknessAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                </Image.Triggers>
+
+            </Image>
+        </Grid>
+
+      
+
+    </Grid>
+</Page>
