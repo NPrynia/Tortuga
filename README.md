@@ -2,6 +2,11 @@
 
 <h1>App for order dishes<h1>
 
+<h2>UML diagram<h2>
+
+![image](https://user-images.githubusercontent.com/81188162/200801501-7064e479-25a8-4eb1-a558-88538778e549.png)
+
+
 
 
 https://user-images.githubusercontent.com/81188162/197173225-05c56c19-1cf6-4fa7-bbc8-158e2fee9855.mp4
